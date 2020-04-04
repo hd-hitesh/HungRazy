@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874567768348",
+    "firebase_url": "https://hungrazy-f310f.firebaseio.com",
+    "project_id": "hungrazy-f310f",
+    "storage_bucket": "hungrazy-f310f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874567768348:android:e16cf84c441ba8023642d9",
+        "android_client_info": {
+          "package_name": "com.example.hungrazy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874567768348-hmlu0at05f6nkb6bhmfakm3atci1jeuo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hungrazy",
+            "certificate_hash": "27aacdd375818ca9cc424854c54d4dccb8e5e78f"
+          }
+        },
+        {
+          "client_id": "874567768348-fcg44k4ov3q2saour5skmt0r5sr31h99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv51f_CjBvGOnWLC1ZHmzeRpzxcNlLlzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874567768348-fcg44k4ov3q2saour5skmt0r5sr31h99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Add">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bc"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tv_newPlaceAdd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#DC443232"
+                android:gravity="center_horizontal"
+                android:text="Add New PLace"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg"
+                app:srcCompat="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Select Type"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cafe" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lounge" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Street Food" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"
+                android:padding="6dp"
+                android:text="Name of Place"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:hint="Enter Name of Place"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg"
+                android:padding="6dp"
+                android:text="Address "
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Address of Place"
+                android:inputType="textPostalAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City "
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="REVIEWS TYPE"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_service_s"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Service"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_food_s"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Food"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_ambiance"
+                    android:layout_width="92dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="15dp"
+                    android:text="Ambiance"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text="Value for  "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/ratingBarPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:numStars="5" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_os"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"
+                android:padding="6dp"
+                android:text="Other Sugesstions"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_os"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
+                android:background="#DFCDCD"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/tv_chooseImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="No Image Choosen"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_uploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bm"
+                android:text="Choose Image" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_addPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bm"
+                android:text="Add Place" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
