@@ -9,6 +9,7 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.InputType;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     String e,p;
     private ProgressDialog loadingBar;
     int a = 1;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText)findViewById(R.id.password);
         loginBtn = findViewById(R.id.loginbtn);
         btn_register = findViewById(R.id.registerBtn);
+        setUpSharedPreferences();
         loadingBar = new ProgressDialog(this);
 
         password.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Data Found", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(MainActivity.this, HomePage.class);
                             startActivity(intent);
+                            saveLoginStatus();
                             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 
                         } else {
@@ -240,5 +245,15 @@ public class MainActivity extends AppCompatActivity {
 
     } // end of validate email
     ////////////////////////////////////////////////////////////////////////////////////////
+
+    private void saveLoginStatus() {
+        editor = sharedPreferences.edit();
+        editor.putBoolean(PrefConstant.IS_LOGGED_IN,true);
+        editor.apply();
+    }
+
+    private void setUpSharedPreferences() {
+        sharedPreferences = getSharedPreferences(PrefConstant.SHARED_PREFERENCE_NAME,MODE_PRIVATE);
+    }
 
 }

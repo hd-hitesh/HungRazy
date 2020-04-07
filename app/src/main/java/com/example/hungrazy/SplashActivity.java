@@ -4,6 +4,7 @@ package com.example.hungrazy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 public class SplashActivity  extends AppCompatActivity {
     Animation anim;
     ImageView imageView;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +29,8 @@ public class SplashActivity  extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent myIntent = new Intent(SplashActivity.this,MainActivity.class);
-                startActivity(myIntent);
+                setUpSharedPreferences();
+                checkLoginStatus();
             }
 
             @Override
@@ -36,6 +39,22 @@ public class SplashActivity  extends AppCompatActivity {
             }
         });
         imageView.startAnimation(anim);
+    }
+
+    private void setUpSharedPreferences() {
+        sharedPreferences = getSharedPreferences(PrefConstant.SHARED_PREFERENCE_NAME,MODE_PRIVATE);
+    }
+
+    private void checkLoginStatus() {
+        boolean isLoggedIn = sharedPreferences.getBoolean(PrefConstant.IS_LOGGED_IN,false);
+        if (isLoggedIn){
+            Intent intent = new Intent(SplashActivity.this,HomePage.class);
+            startActivity(intent);
+        }
+        else{
+            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
