@@ -15,7 +15,7 @@
 
 
         <activity android:name=".SplashActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Notoolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,6 +28,9 @@
         <activity android:name=".Add" />
         <activity android:name=".ListPage" />
         <activity android:name=".HomePage" />
+        <activity android:name=".onboarding.OnBoardingActivity"
+            android:theme="@style/Notoolbar">
+        </activity>
         <activity android:name=".MainActivity">
 
         </activity>

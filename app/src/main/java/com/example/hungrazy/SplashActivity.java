@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.hungrazy.onboarding.OnBoardingActivity;
+
 public class SplashActivity  extends AppCompatActivity {
     Animation anim;
     ImageView imageView;
@@ -47,13 +49,20 @@ public class SplashActivity  extends AppCompatActivity {
 
     private void checkLoginStatus() {
         boolean isLoggedIn = sharedPreferences.getBoolean(PrefConstant.IS_LOGGED_IN,false);
+        boolean isBoardingSuccess = sharedPreferences.getBoolean(PrefConstant.ON_BOARDED_SUCCESSFULLY,false);
+
         if (isLoggedIn){
             Intent intent = new Intent(SplashActivity.this,HomePage.class);
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-            startActivity(intent);
+            if (isBoardingSuccess) {
+                Intent intent =new Intent(this, MainActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent =new Intent(this, OnBoardingActivity.class);
+                startActivity(intent);
+            }
         }
     }
 
