@@ -1,4 +1,4 @@
-package com.example.hungrazy;
+package com.example.hungrazy.activity;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.hungrazy.PrefConstant;
+import com.example.hungrazy.R;
 import com.example.hungrazy.onboarding.OnBoardingActivity;
 
 public class SplashActivity  extends AppCompatActivity {
@@ -64,6 +66,7 @@ public class SplashActivity  extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+        finish();
     }
 
 }

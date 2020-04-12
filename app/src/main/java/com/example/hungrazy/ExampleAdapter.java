@@ -12,6 +12,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hungrazy.activity.Show;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;

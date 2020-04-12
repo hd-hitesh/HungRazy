@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bc"
     android:orientation="vertical"
-    tools:context=".Add_revieww">
+    tools:context=".activity.Add_revieww">
 
     <ScrollView
         android:layout_width="match_parent"

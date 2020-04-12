@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import androidx.viewpager.widget.ViewPager
-import com.example.hungrazy.MainActivity
+import com.example.hungrazy.activity.MainActivity
 import com.example.hungrazy.PrefConstant
 import com.example.hungrazy.R
 

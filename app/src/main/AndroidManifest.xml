@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".SplashActivity"
+        <activity android:name=".activity.SplashActivity"
             android:theme="@style/Notoolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +23,15 @@
         </activity>
 
 
-        <activity android:name=".Add_revieww" />
-        <activity android:name=".Show" />
-        <activity android:name=".Add" />
-        <activity android:name=".ListPage" />
-        <activity android:name=".HomePage" />
+        <activity android:name=".activity.Add_revieww" />
+        <activity android:name=".activity.Show" />
+        <activity android:name=".activity.Add" />
+        <activity android:name=".activity.ListPage" />
+        <activity android:name=".activity.HomePage" />
         <activity android:name=".onboarding.OnBoardingActivity"
             android:theme="@style/Notoolbar">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
 
         </activity>
     </application>

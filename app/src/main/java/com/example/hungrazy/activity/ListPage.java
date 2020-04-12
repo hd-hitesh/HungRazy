@@ -1,4 +1,4 @@
-package com.example.hungrazy;
+package com.example.hungrazy.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.hungrazy.Datas;
+import com.example.hungrazy.ExampleAdapter;
+import com.example.hungrazy.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

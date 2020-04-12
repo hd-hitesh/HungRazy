@@ -7,7 +7,7 @@
     android:background="#E2B9B9"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".HomePage">
+    tools:context=".activity.HomePage">
 
     <EditText
         android:id="@+id/search_bar"
